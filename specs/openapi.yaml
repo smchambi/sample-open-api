@@ -44,9 +44,9 @@ components:
     CreateEntityRequestDto:
       properties:
         extended_data:
+          description: iop.extensibility.description
           allOf:
             - $ref: 'extended_data.yaml'
-          description: iop.extensibility.description
           x-itx-extensibility-subject: 'iop.extensibility.libdatax.test.v1'
         very_important_number:
           description: A very important number, of course

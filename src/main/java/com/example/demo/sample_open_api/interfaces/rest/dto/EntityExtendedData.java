@@ -14,7 +14,7 @@ import org.springframework.hateoas.RepresentationModel;
 /**
 * EntityExtendedData
 */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2021-09-15T14:11:08.519201400+02:00[Europe/Paris]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2021-09-15T09:22:52.266046700-03:00[America/Buenos_Aires]")
 public class EntityExtendedData extends RepresentationModel<EntityExtendedData>   {
 
     private static final String SUBJECT = "iop.extensibility.libdatax.entity.v1";
