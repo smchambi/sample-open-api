@@ -1,6 +1,7 @@
 package com.example.demo.sample_open_api.interfaces.rest.dto;
 
 import java.util.Objects;
+import com.example.demo.sample_open_api.interfaces.rest.dto.EntityExtendedDataAllOf;
 import com.example.demo.sample_open_api.interfaces.rest.dto.ExtendedData;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -13,13 +14,17 @@ import org.springframework.hateoas.RepresentationModel;
 /**
 * EntityExtendedData
 */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2021-09-15T08:31:22.943460600-03:00[America/Buenos_Aires]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2021-09-15T14:11:08.519201400+02:00[Europe/Paris]")
 public class EntityExtendedData extends RepresentationModel<EntityExtendedData>   {
 
     private static final String SUBJECT = "iop.extensibility.libdatax.entity.v1";
 
     @JsonProperty("data")
       private String data;
+
+
+    @JsonProperty("test")
+      private String test;
 
 
     public EntityExtendedData data(String data) {
@@ -44,6 +49,28 @@ public class EntityExtendedData extends RepresentationModel<EntityExtendedData> 
 
 
 
+    public EntityExtendedData test(String test) {
+      this.test = test;
+    return this;
+    }
+
+  /**
+    * Get test
+  * @return test
+  */
+  @ApiModelProperty(value = "")
+  
+
+  public String getTest() {
+  return test;
+  }
+
+    public void setTest(String test) {
+    this.test = test;
+    }
+
+
+
 @Override
 public boolean equals(Object o) {
 if (this == o) {
@@ -53,12 +80,13 @@ if (o == null || getClass() != o.getClass()) {
 return false;
 }
   EntityExtendedData entityExtendedData = (EntityExtendedData) o;
-  return Objects.equals(this.data, entityExtendedData.data);
+  return Objects.equals(this.data, entityExtendedData.data) &&
+  Objects.equals(this.test, entityExtendedData.test);
 }
 
 @Override
 public int hashCode() {
-return Objects.hash(data);
+return Objects.hash(data, test);
 }
 
 @Override
@@ -67,6 +95,7 @@ StringBuilder sb = new StringBuilder();
 sb.append("class EntityExtendedData {\n");
 
 sb.append("    data: ").append(toIndentedString(data)).append("\n");
+sb.append("    test: ").append(toIndentedString(test)).append("\n");
 sb.append("}");
 return sb.toString();
 }

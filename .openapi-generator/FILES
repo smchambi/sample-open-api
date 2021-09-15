@@ -4,4 +4,5 @@ src/main/java/com/example/demo/sample_open_api/interfaces/rest/ApiUtil.java
 src/main/java/com/example/demo/sample_open_api/interfaces/rest/DefaultApi.java
 src/main/java/com/example/demo/sample_open_api/interfaces/rest/dto/CreateEntityRequestDto.java
 src/main/java/com/example/demo/sample_open_api/interfaces/rest/dto/EntityExtendedData.java
+src/main/java/com/example/demo/sample_open_api/interfaces/rest/dto/EntityExtendedDataAllOf.java
 src/main/java/com/example/demo/sample_open_api/interfaces/rest/dto/ExtendedData.java

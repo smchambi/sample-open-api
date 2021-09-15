@@ -1,7 +1,7 @@
 package com.example.demo.sample_open_api.interfaces.rest.dto;
 
 import java.util.Objects;
-import com.example.demo.sample_open_api.interfaces.rest.dto.EntityExtendedData;
+import com.example.demo.sample_open_api.interfaces.rest.dto.ExtendedData;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
@@ -14,36 +14,36 @@ import org.springframework.hateoas.RepresentationModel;
 /**
 * CreateEntityRequestDto
 */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2021-09-15T08:31:22.943460600-03:00[America/Buenos_Aires]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2021-09-15T14:11:08.519201400+02:00[Europe/Paris]")
 public class CreateEntityRequestDto extends RepresentationModel<CreateEntityRequestDto>   {
 
 
     @JsonProperty("extended_data")
-      private EntityExtendedData extendedData;
+      private ExtendedData extendedData;
 
 
     @JsonProperty("very_important_number")
       private BigDecimal veryImportantNumber;
 
 
-    public CreateEntityRequestDto extendedData(EntityExtendedData extendedData) {
+    public CreateEntityRequestDto extendedData(ExtendedData extendedData) {
       this.extendedData = extendedData;
     return this;
     }
 
   /**
-    * Get extendedData
+    * iop.extensibility.description
   * @return extendedData
   */
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "iop.extensibility.description")
   
   @Valid
 
-  public EntityExtendedData getExtendedData() {
+  public ExtendedData getExtendedData() {
   return extendedData;
   }
 
-    public void setExtendedData(EntityExtendedData extendedData) {
+    public void setExtendedData(ExtendedData extendedData) {
     this.extendedData = extendedData;
     }
 

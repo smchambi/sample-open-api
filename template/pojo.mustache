@@ -18,6 +18,9 @@ public class {{classname}} {{#parent}}extends {{{parent}}}{{/parent}}{{^parent}}
 {{#vendorExtensions.x-string-constants}}
     private static final String {{name}} = "{{value}}";
 {{/vendorExtensions.x-string-constants}}
+{{#vendorExtensions.x-itx-extensibility-subject}}
+  public static final String SUBJECT = "{{vendorExtensions.x-itx-extensibility-subject}}";
+{{/vendorExtensions.x-itx-extensibility-subject}}
 {{#vendorExtensions.x-integer-constants}}
   private static final Integer {{name}} = {{value}};
 {{/vendorExtensions.x-integer-constants}}

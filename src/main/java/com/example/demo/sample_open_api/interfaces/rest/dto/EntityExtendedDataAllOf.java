@@ -10,34 +10,34 @@ import javax.validation.constraints.*;
 import org.springframework.hateoas.RepresentationModel;
 
 /**
-* ExtendedData
+* EntityExtendedDataAllOf
 */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2021-09-15T14:11:08.519201400+02:00[Europe/Paris]")
-public class ExtendedData extends RepresentationModel<ExtendedData>   {
+public class EntityExtendedDataAllOf extends RepresentationModel<EntityExtendedDataAllOf>   {
 
 
-    @JsonProperty("data")
-      private String data;
+    @JsonProperty("test")
+      private String test;
 
 
-    public ExtendedData data(String data) {
-      this.data = data;
+    public EntityExtendedDataAllOf test(String test) {
+      this.test = test;
     return this;
     }
 
   /**
-    * Get data
-  * @return data
+    * Get test
+  * @return test
   */
   @ApiModelProperty(value = "")
   
 
-  public String getData() {
-  return data;
+  public String getTest() {
+  return test;
   }
 
-    public void setData(String data) {
-    this.data = data;
+    public void setTest(String test) {
+    this.test = test;
     }
 
 
@@ -50,21 +50,21 @@ return true;
 if (o == null || getClass() != o.getClass()) {
 return false;
 }
-  ExtendedData extendedData = (ExtendedData) o;
-  return Objects.equals(this.data, extendedData.data);
+  EntityExtendedDataAllOf entityExtendedDataAllOf = (EntityExtendedDataAllOf) o;
+  return Objects.equals(this.test, entityExtendedDataAllOf.test);
 }
 
 @Override
 public int hashCode() {
-return Objects.hash(data);
+return Objects.hash(test);
 }
 
 @Override
 public String toString() {
 StringBuilder sb = new StringBuilder();
-sb.append("class ExtendedData {\n");
+sb.append("class EntityExtendedDataAllOf {\n");
 
-sb.append("    data: ").append(toIndentedString(data)).append("\n");
+sb.append("    test: ").append(toIndentedString(test)).append("\n");
 sb.append("}");
 return sb.toString();
 }

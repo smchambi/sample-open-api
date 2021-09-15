@@ -36,12 +36,18 @@ components:
       - name: SUBJECT
         value: 'iop.extensibility.libdatax.entity.v1'
       allOf:
-      - $ref: 'ExtendedData.yaml'
+      - $ref: 'extended_data.yaml'
       - type: object
+        properties:
+          test:
+            type: string
     CreateEntityRequestDto:
       properties:
         extended_data:
-          $ref: '#/components/schemas/EntityExtendedData'
+          allOf:
+            - $ref: 'extended_data.yaml'
+          description: iop.extensibility.description
+          x-itx-extensibility-subject: 'iop.extensibility.libdatax.test.v1'
         very_important_number:
           description: A very important number, of course
           maximum: 42
