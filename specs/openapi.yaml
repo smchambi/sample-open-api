@@ -1,0 +1,49 @@
+openapi: 3.0.3
+info:
+  title: goods service
+  version: 1.0.0
+  description: |-
+    This is a goods service  
+    Provide price query and inventory management functions
+  license:
+    name: Apache 2.0
+    url: 'https://www.apache.org/licenses/LICENSE-2.0'
+servers:
+  - url: 'http://{domain}:{port}'
+    description: 伺服器URL
+    variables:
+      domain:
+        default: localhost
+      port:
+        default: '8080'
+        description: 開發環境
+paths:
+  /entity:
+    post:
+      summary: Create entity
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateEntityRequestDto"
+      responses:
+        '200':
+          description: OK
+components:
+  schemas:
+    EntityExtendedData:
+      x-string-constants:
+      - name: SUBJECT
+        value: 'iop.extensibility.libdatax.entity.v1'
+      allOf:
+      - $ref: 'ExtendedData.yaml'
+      - type: object
+    CreateEntityRequestDto:
+      properties:
+        extended_data:
+          $ref: '#/components/schemas/EntityExtendedData'
+        very_important_number:
+          description: A very important number, of course
+          maximum: 42
+          minimum: 0
+          type: number
